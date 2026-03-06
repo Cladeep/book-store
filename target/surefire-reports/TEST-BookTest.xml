@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BookTest" time="0.034" tests="7" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ClaudioDiPietro\projects\book-store\target\test-classes;C:\Users\ClaudioDiPietro\projects\book-store\target\classes;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Rome"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IT"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\ClaudioDiPietro\AppData\Local\Temp\surefire1997742817459946022\surefirebooter15937270835827355694.jar C:\Users\ClaudioDiPietro\AppData\Local\Temp\surefire1997742817459946022 2026-03-06T11-22-39_792-jvmRun1 surefire6188450231851773567tmp surefire_07891766794746956824tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\ClaudioDiPietro\projects\book-store\target\test-classes;C:\Users\ClaudioDiPietro\projects\book-store\target\classes;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\ClaudioDiPietro\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ClaudioDiPietro"/>
+    <property name="user.language" value="it"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\ClaudioDiPietro\projects\book-store"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\ClaudioDiPietro\AppData\Local\Temp\surefire1997742817459946022\surefirebooter15937270835827355694.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.10+7-LTS"/>
+    <property name="user.name" value="ClaudioDiPietro"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.10+7"/>
+    <property name="localRepository" value="C:\Users\ClaudioDiPietro\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\CLAUDI~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.10"/>
+    <property name="user.dir" value="C:\Users\ClaudioDiPietro\projects\book-store"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Users\ClaudioDiPietro\AppData\Local\Programs\Microsoft VS Code;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Apache\Maven\apache-maven-3.9.12\bin;C:\Users\ClaudioDiPietro\AppData\Local\Microsoft\WindowsApps;C:\Users\ClaudioDiPietro\AppData\Local\Programs\Microsoft VS Code\bin;c:\Users\ClaudioDiPietro\.vscode\extensions\vscjava.vscode-java-debug-0.58.5\bundled\scripts\noConfigScripts;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.10+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testAddBook" classname="BookTest" time="0.027">
+    <system-err><![CDATA[Il libro The Lord of the Ringsè stato aggiunto in libreria
+]]></system-err>
+  </testcase>
+  <testcase name="testPaperBookCreation" classname="BookTest" time="0.003"/>
+  <testcase name="testListBooks" classname="BookTest" time="0.001">
+    <system-err><![CDATA[Il libro The Lord of the Ringsè stato aggiunto in libreria
+Il libro Game of Thronesè stato aggiunto in libreria
+Il libro Harry Potterè stato aggiunto in libreria
+]]></system-err>
+  </testcase>
+  <testcase name="testGetBookByAuthor" classname="BookTest" time="0">
+    <system-err><![CDATA[Il libro The Lord of the Ringsè stato aggiunto in libreria
+Il libro Harry Potter1è stato aggiunto in libreria
+Il libro Harry Potter2è stato aggiunto in libreria
+]]></system-err>
+  </testcase>
+  <testcase name="assertBookCreation" classname="BookTest" time="0.002"/>
+  <testcase name="testRemoveBook" classname="BookTest" time="0">
+    <system-err><![CDATA[Il libro The Lord of the Ringsè stato aggiunto in libreria
+]]></system-err>
+  </testcase>
+  <testcase name="testEbookCreation" classname="BookTest" time="0"/>
+</testsuite>

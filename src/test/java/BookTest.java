@@ -41,7 +41,11 @@
  * You can find more assertions in the JUnit documentation: https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html
  */
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -72,6 +76,23 @@ class BookTest {
         // 2. Create a new Book object.
         // 3. Add the book to the library.
         // 4. Verify that the book is in the library.
+
+        //Arrange
+        final Library library = new Library();
+
+        final String title = "The Lord of the Rings";
+        final String author =  "J.R.R. Tolkien";
+        final String isbn = "f276d2bb-d9aa-43c0-9fe9-e1ec89a33c39";
+
+        Book book = new Book(title, author, isbn);
+
+        //act
+        library.addBook(book);
+
+        //assert
+        List<Book> books = library.listBooks();
+        assertEquals(1, books.size());
+        assertTrue(books.contains(book));
     }
 
     @Test
@@ -81,6 +102,26 @@ class BookTest {
         // 2. Create a new Book object and add it to the library.
         // 3. Remove the book from the library using its ISBN.
         // 4. Verify that the book is no longer in the library.
+
+        //arrange
+        final Library library = new Library();
+
+        final String title = "The Lord of the Rings";
+        final String author =  "J.R.R. Tolkien";
+        final String isbn = "f276d2bb-d9aa-43c0-9fe9-e1ec89a33c39";
+
+        Book book = new Book(title, author, isbn);
+
+        //act
+        library.addBook(book);
+        library.removeBook("f276d2bb-d9aa-43c0-9fe9-e1ec89a33c39");
+
+        //assert
+        List<Book> books = library.listBooks();
+        assertEquals(0, books.size());
+        assertFalse(books.contains(book));
+
+
     }
 
     @Test
@@ -90,6 +131,37 @@ class BookTest {
         // 2. Create multiple Book objects and add them to the library.
         // 3. Call the listBooks() method.
         // 4. Verify that the returned list contains all the books that were added.
+
+        //arrange
+        final Library library = new Library();
+
+        final String title1 = "The Lord of the Rings";
+        final String author1 =  "J.R.R. Tolkien";
+        final String isbn1 = "f276d2bb-d9aa-43c0-9fe9-e1ec89a33c39";
+
+        final String title2 = "Game of Thrones";
+        final String author2 =  "George R.R. Martin";
+        final String isbn2 = "f276d2bb-d9aa-43c0-9fe9";
+
+        final String title3 = "Harry Potter";
+        final String author3 =  "J.k.Rowling";
+        final String isbn3 = "fe1ec89a33c39";
+
+        Book book1 = new Book(title1, author1, isbn1);
+        Book book2 = new Book(title2, author2, isbn2);
+        Book book3 = new Book(title3, author3, isbn3);
+
+        //act
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+        List<Book> books = library.listBooks();
+
+        //assert
+        assertEquals(3, books.size());
+        assertTrue(books.contains(book1));
+        assertTrue(books.contains(book2));
+        assertTrue(books.contains(book3));
     }
 
     @Test
@@ -99,6 +171,25 @@ class BookTest {
         // 2. Create multiple Book objects with different authors and add them to the library.
         // 3. Call the getBook() method with a specific author.
         // 4. Verify that the returned list contains all the books by that author.
+
+        //arrange
+        final Library library = new Library();
+
+        Book book1 = new Book("The Lord of the Rings", "J.R.R. Tolkien" , "384318974393");
+        Book book2 = new Book("Harry Potter1", "J.K.Rowling", "29927");
+        Book book3 = new Book("Harry Potter2","J.K.Rowling", "388392");
+
+        //act
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
+
+        //assert
+        List<Book> booksByAuthor = library.getBooksByAuthor("J.K.Rowling");
+        assertEquals(2, booksByAuthor.size());
+        assertTrue(booksByAuthor.contains(book2));
+        assertTrue(booksByAuthor.contains(book3));
+        assertFalse(booksByAuthor.contains(book1));
     }
 
     @Test
@@ -106,12 +197,37 @@ class BookTest {
         // TODO: This test should verify that an Ebook can be created with the correct properties.
         // 1. Create a new Ebook object.
         // 2. Verify that the book object has the correct properties (title, author, isbn, and file size).
+
+        //arrange
+        Ebook ebook = new Ebook("Clean Code", "Robert C. Martin", "393929303", 51);
+
+        //act
+
+        //assert
+        assertEquals("Clean Code", ebook.getTitle());
+        assertEquals("Robert C. Martin", ebook.getAuthor());
+        assertEquals("393929303", ebook.getIsbn());
+        assertEquals(51, ebook.getFileSize());
+
     }
 
     @Test
     void testPaperBookCreation() {
-        // TODO: This test should verify that a PaperBook can be created with the correct properties.
         // 1. Create a new PaperBook object.
         // 2. Verify that the book object has the correct properties (title, author, isbn, and weight).
+
+        //arrange
+        PaperBook paperBook = new PaperBook("Effective Java", "Joshua Bloch", "20039929", 750);
+
+        //act
+
+        //assert
+        assertEquals("Effective Java", paperBook.getTitle());
+        assertEquals("Joshua Bloch", paperBook.getAuthor());
+        assertEquals("20039929", paperBook.getIsbn());
+        assertEquals(750, paperBook.getWeight());
     }
+
+
+    
 }
